@@ -1,0 +1,16 @@
+.guideList {
+  padding-left: 23px;
+  margin: 0;
+  margin-bottom: 25px ;
+}
+
+.guideItemMarker {
+  color: var(--red-darker);
+}
+
+.guideItem {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 33px;
+  color: var(--text);
+}

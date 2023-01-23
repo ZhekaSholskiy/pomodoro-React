@@ -1,0 +1,62 @@
+.taskWrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text);
+  border-top: 1px solid var(--border-gray);
+  height: 55px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.tomatoCounter {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background-image: url('./circle.svg');
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: background-color .2s ease-in-out;
+}
+
+.taskText {
+  margin-right: auto;
+  border: none;
+  color: var(--text);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.taskText:focus {
+  outline: none;
+  background-color: var(--background-gray-light);
+}
+
+.absoluteTask {
+  position: fixed;
+  background-color: var(--background-white);
+  border: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.highlight {
+  border-top: 1px solid var(--red-pale);
+}
+
+.highlightBot::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--red-pale);
+}

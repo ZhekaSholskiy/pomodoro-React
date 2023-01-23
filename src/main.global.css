@@ -1,0 +1,81 @@
+:root {
+  --background-white: white;
+  --background-gray: #E5E5E5;
+  --red-main: #DC3E22;
+  --red-darker: #B7280F;
+  --red-pale: #EA8A79;
+  --text: #333;
+  --text-white: white;
+  --text-gray: #999;
+  --text-gray-darker: #c4c4c4;
+  --background-gray-light: #F4F4F4;
+  --background-gray-medium: #ECECEC;
+  --background-gray-darker: #c4c4c4;
+  --background-orange-light: #FFDDA9;
+  --background-blue-dark: #DFDCFE;
+  --background-blue-green: #C5F1FF;
+  --green: #A8B64F;
+  --green-dark: #899441;
+  --border-gray: #E4E4E4;
+  --border-gray-darker: #c4c4c4;
+  --border-gray-darkest: #DEDEDE;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "SF UI Display", sans-serif;
+}
+
+body {
+  background-color: var(--background-gray);
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: local("SF UI Display-Bold"),
+  url("./fonts/SFUIDisplay-Bold.woff") format("woff"),
+  url("./fonts/SFUIDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: local("SF UI Display-Light"),
+  url("./fonts/SFUIDisplay-Light.woff") format("woff"),
+  url("./fonts/SFUIDisplay-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: local("SF UI Display-Medium"),
+  url("./fonts/SFUIDisplay-Medium.woff") format("woff"),
+  url("./fonts/SFUIDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: local("SF UI Display-Regular"),
+  url("./fonts/SFUIDisplay-Regular.woff") format("woff"),
+  url("./fonts/SFUIDisplay-Regular.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: local("SF UI Display-Thin"),
+  url("./fonts/SFUIDisplay-Thin.woff") format("woff"),
+  url("./fonts/SFUIDisplay-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,80 @@
+.chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.chartAxis {
+  display: flex;
+  height: 51px;
+  align-items: center;
+  padding-left: 56px;
+  padding-right: calc(56px + 109px);
+  background-color: var(--background-gray-medium);
+}
+
+.weekDay {
+  width: 77px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.weekDay:not(:last-child) {
+  margin-right: 32px;
+}
+
+.chartPlot {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  padding-top: 45px;
+  padding-left: 56px;
+  background-color: var(--background-gray-light);
+}
+
+.column {
+  background-color: var(--red-pale);
+  width: 77px;
+  z-index: 1;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+
+.column:hover {
+  opacity: 0.8;
+}
+
+.column:not(:last-child) {
+  margin-right: 32px;
+}
+
+.linesContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  position: absolute;
+  height: calc(100% - 45px);
+  top: 45px;
+  left: 0;
+  right: 109px;
+  bottom: 0;
+}
+
+.chartLine {
+  position: relative;
+  border-top: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.timeline {
+  position: absolute;
+  right: -89px;
+  top: 0;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 33px;
+  color: var(--text);
+}

@@ -1,0 +1,52 @@
+
+.tomato {
+  width: 81px;
+  height: 81px;
+  background-image: url('./tomato\ 1.svg');
+  margin-right: 15px;
+}
+
+.tomatosAmount {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text-gray);
+}
+
+.textPart {
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text-white);
+  background-color: var(--red-main);
+  height: 51px;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+}
+
+.tomatosAmountContainer {
+  position: relative;
+  width: 296px;
+  height: 179px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-gray-light);
+}
+
+.holePomodoro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('./tomatoWithoutData.svg');
+  width: 115px;
+  height: 115px;
+}

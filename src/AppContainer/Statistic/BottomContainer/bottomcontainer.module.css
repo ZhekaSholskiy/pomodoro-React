@@ -1,0 +1,49 @@
+.bottomContainer {
+  display: flex;
+}
+
+.metricContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metricTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text);
+  margin: 0;
+}
+
+.metricResult {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 76px;
+  color: var(--text);
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 25px;
+  height: 179px;
+  width: 405px;
+}
+
+.metric:not(:last-child) {
+  margin-right: 32px;
+}
+
+.focus {
+  background-color: var(--background-orange-light);
+}
+
+.pauseTime {
+  background-color: var(--background-blue-dark);
+}
+
+.breakPoints {
+  background-color: var(--background-blue-green);
+}

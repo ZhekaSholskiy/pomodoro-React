@@ -1,0 +1,9 @@
+.middleContainer {
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.leftPart {
+  margin-right: 32px;
+}
+

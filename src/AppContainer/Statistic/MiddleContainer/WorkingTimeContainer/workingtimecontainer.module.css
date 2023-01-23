@@ -1,0 +1,27 @@
+
+.day {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text);
+  margin-bottom: 14px ;
+}
+
+.workingTimeContainer {
+  width: 296px;
+  height: 260px;
+  background-color: var(--background-gray-light);
+  padding: 25px;
+  margin-bottom: 32px;
+}
+
+.workingTime {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--text);
+}
+
+.minutes {
+  color: var(--red-main);
+}

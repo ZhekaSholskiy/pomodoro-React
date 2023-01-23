@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  padding-top: 25px;
+  max-width: 370px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.totalTomatos {
+  position: absolute;
+  bottom: -36px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  color: #999999;
+}

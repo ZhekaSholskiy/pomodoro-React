@@ -1,0 +1,66 @@
+.modalBg::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 175px;
+  background-color: var(--background-white);
+  padding: 25px;
+  z-index: 100;
+}
+
+.modalName {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 17px;
+  color: var(--text);
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.modalBtn {
+  background-color: var(--red-main);
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  width: 162px;
+  height: 55px;
+}
+
+.modalBtn:hover {
+  background-color: var(--red-darker);
+}
+
+.modalCancel {
+  background-color: transparent;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text);
+  text-decoration: underline;
+  height: min-content;
+  width: min-content;
+}
+
+.closeModal {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
