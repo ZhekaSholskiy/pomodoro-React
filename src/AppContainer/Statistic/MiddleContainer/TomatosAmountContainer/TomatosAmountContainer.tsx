@@ -6,7 +6,7 @@ import { handlePomodoro } from './handlePomodoro';
 export function TomatosAmountContainer(props: {statistic: IStatistic, pickedDay: number}) {
   return (
     <div className={styles.tomatosAmountContainer}>
-      { props.statistic.totalTime.filter(el => el.getDay() === props.pickedDay).length === 0 ?
+      { props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 ?
         <div className={styles.holePomodoro}></div> :
         <>
         <div className={styles.previewPart}>

@@ -22,9 +22,9 @@ export function getCurrentWeek(week: string, generalInfo: IStatistic) {
   const thisWeekEntryPoint = new Date(year, month, dayOfWeekBeginning);
   const recalcEntryPoint = recalcTime(thisWeekEntryPoint, week)
   const filtredInfo:IStatistic = {
-    totalTime: filterInfo(generalInfo, 'totalTime', recalcEntryPoint) as Date[],
-    totalTomatos: filterInfo(generalInfo, 'totalTomatos', recalcEntryPoint) as object & {time: number, date: Date}[],
-    pauseTime: filterInfo(generalInfo, 'pauseTime', recalcEntryPoint) as Date[],
+    totalTime: filterInfo(generalInfo, 'totalTime', recalcEntryPoint) as {time: number, date: Date}[],
+    totalTomatos: filterInfo(generalInfo, 'totalTomatos', recalcEntryPoint) as {time: number, date: Date}[],
+    pauseTime: filterInfo(generalInfo, 'pauseTime', recalcEntryPoint) as {time: number, date: Date}[],
     stopAmount: filterInfo(generalInfo, 'stopAmount', recalcEntryPoint) as Date[],
   };
   return filtredInfo;

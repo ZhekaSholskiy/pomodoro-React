@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './bottomcontainer.module.css';
 import { IStatistic } from '../../AppMain/TasksWindow/model';
+import { getDayTotalTime, metrics } from '../MiddleContainer/getDayTotalTime';
 
 export function BottomContainer(props: {statistic: IStatistic, pickedDay: number}) {
   function handlePauseTime(time: number) {
@@ -12,14 +13,14 @@ export function BottomContainer(props: {statistic: IStatistic, pickedDay: number
   }
 
   let clearTime = 0;
-  props.statistic.totalTomatos.filter(el => el.date.getDay() === props.pickedDay).map(el => clearTime =+ el.time);
-  let dirtyTime = props.statistic.totalTime.filter(el => el.getDay() === props.pickedDay).length;
-  const percent:number = clearTime/dirtyTime * 100;
+  props.statistic.totalTomatos.filter(el => el.date.getDay() === props.pickedDay).map(el => clearTime += el.time);
+  let dirtyTime = getDayTotalTime(props.pickedDay, props.statistic);
+  const percent:number = (clearTime / (dirtyTime * 1000)) * 100; // ms / s
   return (
     <div className={styles.bottomContainer}>
-      <div className={`${styles.focus} ${styles.metric}`}
+      <div className={`${styles.focus} ${styles.metric} ${props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 && styles.graySvg}`}
         style={
-          props.statistic.totalTime.filter(el => el.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
+          props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
           {}
         }>
         <div className={styles.metricContainer}>
@@ -38,9 +39,9 @@ export function BottomContainer(props: {statistic: IStatistic, pickedDay: number
           </svg>
         </div>
       </div>
-      <div className={`${styles.pauseTime} ${styles.metric}`}
+      <div className={`${styles.pauseTime} ${styles.metric} ${props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 && styles.graySvg}`}
         style={
-          props.statistic.totalTime.filter(el => el.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
+          props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
           {}
         }>
         <div className={styles.metricContainer}>
@@ -48,7 +49,7 @@ export function BottomContainer(props: {statistic: IStatistic, pickedDay: number
           Время на паузе
         </h2>
         <div className={styles.metricResult}>
-            {handlePauseTime(props.statistic.pauseTime.filter(el => el.getDay() === props.pickedDay).length)}
+            {handlePauseTime(getDayTotalTime(props.pickedDay, props.statistic, metrics.pauseTime))}
         </div>
         </div>
         <div className={styles.preview}>
@@ -58,9 +59,9 @@ export function BottomContainer(props: {statistic: IStatistic, pickedDay: number
           </svg>
         </div>
       </div>
-      <div className={`${styles.breakPoints} ${styles.metric}`}
+      <div className={`${styles.breakPoints} ${styles.metric} ${props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 && styles.graySvg}`}
         style={
-          props.statistic.totalTime.filter(el => el.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
+          props.statistic.totalTime.filter(el => el.date.getDay() === props.pickedDay).length === 0 ? {backgroundColor: 'var(--background-gray-light)'} :
           {}
         }>
         <div className={styles.metricContainer}>

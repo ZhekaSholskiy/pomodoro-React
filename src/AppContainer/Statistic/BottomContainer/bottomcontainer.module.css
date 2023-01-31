@@ -47,3 +47,7 @@
 .breakPoints {
   background-color: var(--background-blue-green);
 }
+
+.graySvg path {
+  stroke: var(--background-gray-darker)
+}

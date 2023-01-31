@@ -1,0 +1,41 @@
+.startBtn {
+  margin-right: 25px;
+  background-color: var(--green);
+}
+
+.startBtn:hover {
+  background-color: var(--green-dark);
+}
+
+.stopBtn {
+  background-color: transparent;
+  border: 1px solid var(--border-gray-darker);
+  color: var(--text-gray-darker);
+}
+
+.stopBtnRed {
+  background-color: transparent;
+  border: 1px solid var(--red-main);
+  color: var(--red-main);
+}
+
+.stopBtnRed:hover {
+  background-color: var(--red-main);
+  border: 1px solid var(--red-main);
+  color: var(--text-white);
+}
+
+.stopBtn:hover {
+  background-color: var(--background-gray-darker);
+  color: var(--text-white);
+}
+
+.stopBtn:disabled {
+  cursor: initial;
+}
+
+.stopBtn:disabled:hover {
+  background-color: transparent;
+  border: 1px solid var(--border-gray-darker);
+  color: var(--text-gray-darker);
+}

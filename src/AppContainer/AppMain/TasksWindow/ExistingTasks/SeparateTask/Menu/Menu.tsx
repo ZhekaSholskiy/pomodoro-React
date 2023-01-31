@@ -2,7 +2,7 @@ import React, { RefObject, useEffect, useRef, useState } from 'react';
 import styles from './menu.module.css';
 import { Dropdown } from './Dropdown';
 import ReactDOM from 'react-dom';
-import { ITask, useStoreState } from '../../../model';
+import { ITask } from '../../../model';
 
 export function Menu(props: {el: ITask, counterRef: RefObject<HTMLDivElement>, enableInput: () => void}) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

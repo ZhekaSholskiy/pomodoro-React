@@ -16,8 +16,10 @@ export function ExistingTasks(props: {setUpdateSignal: (toggle: boolean) => void
 
   useEffect(() => {
     function swapStore() {
-      tasks.splice(highlighted, 0, tasks.splice(choosedEl, 1)[0]);
+      tasks.splice(highlighted, 0, tasks.splice(choosedEl, 1)[0])
       setNeedToUpdate(false);
+      setHighlighted(0);
+      setChoosedEl(0);
     }
 
     if (needToUpdate) {
@@ -26,7 +28,7 @@ export function ExistingTasks(props: {setUpdateSignal: (toggle: boolean) => void
     } else {
       props.setUpdateSignal(false);
     }
-  }, [needToUpdate, highlighted, choosedEl, tasks, props])
+  }, [needToUpdate, highlighted, choosedEl])
 
 
   return (

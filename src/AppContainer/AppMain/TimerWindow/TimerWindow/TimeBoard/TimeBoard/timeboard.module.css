@@ -1,0 +1,25 @@
+
+
+.timer {
+  font-weight: 200;
+  font-size: 150px;
+  line-height: 179px;
+  color: var(--text);
+  position: relative;
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  right: -75px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.plus circle {
+  transition: fill .2s ease-in-out;
+}
+
+.plus:hover circle {
+  fill: var(--green-dark);
+}

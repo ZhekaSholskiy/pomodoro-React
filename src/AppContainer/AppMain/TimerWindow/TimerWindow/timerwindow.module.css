@@ -1,0 +1,50 @@
+.timerContainer {
+  max-width: 733px;
+  max-height: 507px;
+  background-color: var(--background-gray-light);
+  flex-grow: 1;
+}
+
+.timerHeader {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: var(--background-gray-darker);
+}
+
+.timerBody {
+  padding: 70px 0 107px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.taskNameHeader {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text-white);
+}
+
+.currentTomato {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text-white);
+}
+
+.taskDescr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.taskNumber {
+  color: var(--text-gray);
+}
+

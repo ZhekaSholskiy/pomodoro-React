@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './appmain.module.css';
 import { TasksWindow } from './TasksWindow';
-import { TimerWindow } from './TimerWindow';
+import { TimerWindowWrapper } from './TimerWindow';
 import { action, createStore } from 'easy-peasy';
 import { tasksModel } from './TasksWindow/model';
 
@@ -13,6 +13,11 @@ export const tasksStore = createStore<tasksModel>({
     pauseTime: [],
     stopAmount: [],
   },
+
+  updateTasks: action((state, payload) => {
+    state.tasks = payload
+  }),
+
   postInfo: action((state, payload) => {
     state.statInfo = {
       totalTime: payload.totalTime,
@@ -21,7 +26,18 @@ export const tasksStore = createStore<tasksModel>({
       stopAmount: payload.stopAmount,
     }
   }),
-
+  postTotalTime: action((state, payload) => {
+    state.statInfo.totalTime = payload;
+  }),
+  postTotalTomatos: action((state, payload) => {
+    state.statInfo.totalTomatos = payload;
+  }),
+  postPauseTime: action((state, payload) => {
+    state.statInfo.pauseTime = payload;
+  }),
+  postStopAmount: action((state, payload) => {
+    state.statInfo.stopAmount = payload;
+  }),
   addTask: action((state, payload) => {
     state.tasks.push(payload);
   }),
@@ -55,11 +71,13 @@ export const tasksStore = createStore<tasksModel>({
 export function AppMain() {
   const [updateSignal, setUpdateSignal] = useState(false);
 
+
+  // updateSignal нужен просто для того, чтобы при изменении TaskWindow обновилась информация в TimerWindowWrapper
   return (
     // <StoreProvider store={tasksStore}>
       <div className={styles.container}>
         <TasksWindow setUpdateSignal={setUpdateSignal}/>
-        <TimerWindow updateSignal={updateSignal}/>
+        <TimerWindowWrapper updateSignal={updateSignal}/>
       </div>
     // </StoreProvider>
   );

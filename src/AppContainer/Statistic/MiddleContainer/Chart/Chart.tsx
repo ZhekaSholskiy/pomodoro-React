@@ -11,7 +11,7 @@ export function Chart(props: {statistic: IStatistic, onPicked: (day:number) => v
 
   const week = [];
   for (let i = 0; i <= 6; i++) {
-    week.push({weekDay: weekDays[i], workingTime: getDayTotalTime(i === 6 ? 0 : i + 1, props.statistic), dayNumber: i === 6 ? 0 : i + 1})
+    week.push({weekDay: weekDays[i], workingTime: getDayTotalTime(i === 6 ? 0 : i + 1, props.statistic)/60, dayNumber: i === 6 ? 0 : i + 1})
   }
 
   const maxWorkingTime = Math.max.apply(null, week.map(el => el.workingTime));

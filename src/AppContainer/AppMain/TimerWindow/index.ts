@@ -1,1 +1,1 @@
-export * from './TimerWindow';
+export * from './TimerWindowWrapper';

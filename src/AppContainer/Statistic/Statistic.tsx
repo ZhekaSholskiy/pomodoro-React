@@ -4,7 +4,6 @@ import { TopContainer } from './TopContainer';
 import { MiddleContainer } from './MiddleContainer';
 import { BottomContainer } from './BottomContainer';
 import { useStoreState } from '../AppMain/TasksWindow/model';
-import { getFakeStat } from './getFakeStat';
 import { getCurrentWeek } from './recalcTime';
 
 export function Statistic() {

@@ -1,5 +1,13 @@
 import { IStatistic } from "../../AppMain/TasksWindow/model";
 
-export function getDayTotalTime(day: number, statistic: IStatistic) {
-  return statistic.totalTime.filter(el => el.getDay() === day).length/60;
+export enum metrics {
+  totalTime = 'totalTime',
+  pauseTime = 'pauseTime'
+}
+
+export function getDayTotalTime(day: number, statistic: IStatistic, metric: metrics = metrics.totalTime) {
+  return statistic[metric].filter(el => el.date.getDay() === day).map(el => el.time)
+    .reduce((prevObj, currentObj) =>
+     prevObj + currentObj, 0
+  );
 }
