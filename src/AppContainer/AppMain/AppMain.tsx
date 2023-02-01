@@ -9,7 +9,7 @@ export function AppMain() {
   const storageInfo = useStoreState((state) => state.statInfo)
 
   useEffect(() => {
-    window.localStorage.setItem('pomodoroApp-12l]hi2cewd21xs', JSON.stringify(storageInfo));
+    window.localStorage.setItem('pomodoroApp-12l]hi2cewd21xs', JSON.stringify(storageInfo)); //  JSON.stringify({}) - для обнуления
   }, [storageInfo])
 
   return (

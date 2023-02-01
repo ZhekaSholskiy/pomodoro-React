@@ -17,10 +17,6 @@ export function TimerWindowWrapper(props: {updateSignal: boolean}) {
   const [taskNumber, setTaskNumber] = useState(1);
   const postTotalTomatos = useStoreActions((actions) => actions.postTotalTomatos);
 
-  const storageInfo = useStoreState((state) => state.statInfo)
-
-  window.localStorage.setItem('pomodoroApp-12l]hi2cewd21xs', JSON.stringify(storageInfo));
-
   function stopAll() {
     setIsActive(false);
     setIsPaused(false);
@@ -34,10 +30,9 @@ export function TimerWindowWrapper(props: {updateSignal: boolean}) {
   }, [currentTask]);
 
   useEffect(() => {
-
     if (time === 0) {
       setTimeout(() => {
-        if (isBrake) {
+        if (!isBrake) {
           setIsBrake(true);
           setTotalTomatos(totalTomatos => [...totalTomatos, {time: wholeTomato, date: new Date()}]);
           setWholeTomato(0)
