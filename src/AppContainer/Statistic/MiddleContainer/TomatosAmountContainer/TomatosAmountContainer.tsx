@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './tomatosamountcontainer.module.css';
-import { IStatistic } from '../../../AppMain/TasksWindow/model';
+import { IStatistic } from '../../../model';
 import { handlePomodoro } from './handlePomodoro';
 
 export function TomatosAmountContainer(props: {statistic: IStatistic, pickedDay: number}) {

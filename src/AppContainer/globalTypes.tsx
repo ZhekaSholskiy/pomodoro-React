@@ -1,4 +1,4 @@
-import { ITask } from "./AppMain/TasksWindow/model";
+import { ITask } from "./model";
 
 export type boolState = React.Dispatch<React.SetStateAction<boolean>>;
 

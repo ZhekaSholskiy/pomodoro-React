@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './separatetask.module.css';
 import { Menu } from './Menu';
-import { useStoreState } from '../../model';
+import { useStoreState } from '../../../../model';
 import { separateTask } from '../../../../globalTypes';
 import { useMouseIvents } from './functions/useMouseIvents';
 import { useHighligh } from './functions/useHighlight';

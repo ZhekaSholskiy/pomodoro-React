@@ -1,4 +1,4 @@
-import { IStatistic } from "../AppMain/TasksWindow/model";
+import { IStatistic } from "../model";
 
 export function recalcTime(inputDate: Date, necessaryWeek: string) {
   const day = inputDate.getDate();
@@ -37,7 +37,7 @@ export function filterInfo(generalInfo: IStatistic, property: string, timePoint:
     filtredArray = generalInfo[property].filter(el => {
       if (el instanceof Date) {
         return el.getTime() >= timePoint && el.getTime() <= timePointPlus;
-      } else {
+      } else if (el.date instanceof Date) {
          return el.date.getTime() >= timePoint && el.date.getTime() <= timePointPlus;
       }
     })

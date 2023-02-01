@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './existingtasks.module.css';
 import { SeparateTask } from './SeparateTask';
-import { useStoreState } from '../model';
+import { useStoreState } from '../../../model';
 import { tomatoTransform } from './tomatoTransform';
 
 export function ExistingTasks(props: {setUpdateSignal: (toggle: boolean) => void}) {

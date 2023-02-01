@@ -4,7 +4,7 @@ import { Button } from '../../../UIElements/Button';
 import { ExistingTasks } from './ExistingTasks';
 import { generateRandomString } from '../../../utils/React/generateRandomIndex';
 import { Guide } from './Guide';
-import { useStoreActions } from './model';
+import { useStoreActions } from '../../model';
 
 
 export function TasksWindow(props: {setUpdateSignal: (toggle: boolean) => void}) {

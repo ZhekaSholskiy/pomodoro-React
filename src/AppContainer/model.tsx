@@ -20,6 +20,16 @@ export interface IStatistic {
   stopAmount: Date[];
 }
 
+export type localStorageType = {time: number, date: Date | string};
+
+export interface ILocalStorage {
+  [key: string]: Array<Date | statisticType | string>;
+  totalTime: statisticType[];
+  totalTomatos: statisticType[];
+  pauseTime: statisticType[];
+  stopAmount: Date[];
+}
+
 export interface tasksModel {
   tasks: Array<ITask>;
   statInfo: IStatistic;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './controlbuttons.module.css';
 import { Button } from '../../../../../UIElements/Button';
-import { useStoreActions, useStoreState } from '../../../TasksWindow/model';
+import { useStoreActions, useStoreState } from '../../../../model';
 import { timerProps } from '../../../../globalTypes';
 
 export function ControlButtons(

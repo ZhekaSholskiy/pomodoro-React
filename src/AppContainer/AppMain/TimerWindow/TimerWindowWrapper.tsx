@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { statisticType, useStoreActions, useStoreState } from '../TasksWindow/model';
+import { statisticType, useStoreActions, useStoreState } from '../../model';
 import { TimerWindow } from './TimerWindow';
 
 const StandartTime:number = 1500000; // norma = 1500000
@@ -16,6 +16,10 @@ export function TimerWindowWrapper(props: {updateSignal: boolean}) {
   const [wholeTomato, setWholeTomato] = useState(0);
   const [taskNumber, setTaskNumber] = useState(1);
   const postTotalTomatos = useStoreActions((actions) => actions.postTotalTomatos);
+
+  const storageInfo = useStoreState((state) => state.statInfo)
+
+  window.localStorage.setItem('pomodoroApp-12l]hi2cewd21xs', JSON.stringify(storageInfo));
 
   function stopAll() {
     setIsActive(false);

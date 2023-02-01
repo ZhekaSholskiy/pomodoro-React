@@ -1,4 +1,4 @@
-import { IStatistic } from "../../AppMain/TasksWindow/model";
+import { IStatistic } from "../../model";
 
 export enum metrics {
   totalTime = 'totalTime',

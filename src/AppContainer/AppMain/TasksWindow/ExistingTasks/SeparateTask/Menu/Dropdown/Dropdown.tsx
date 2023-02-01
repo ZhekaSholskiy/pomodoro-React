@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './dropdown.module.css';
-import { ITask, useStoreActions } from '../../../../model';
+import { ITask, useStoreActions } from '../../../../../../model';
 import { DeleteModal } from './DeleteModal';
 
 export function Dropdown(props:

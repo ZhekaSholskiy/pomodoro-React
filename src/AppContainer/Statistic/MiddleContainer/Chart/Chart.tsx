@@ -3,7 +3,7 @@ import styles from './chart.module.css';
 import { getDayTotalTime } from '../getDayTotalTime';
 import { generateRandomString } from '../../../../utils/React/generateRandomIndex';
 import { tomatoTransform } from '../../../AppMain/TasksWindow/ExistingTasks/tomatoTransform';
-import { IStatistic } from '../../../AppMain/TasksWindow/model';
+import { IStatistic } from '../../../model';
 
 const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 

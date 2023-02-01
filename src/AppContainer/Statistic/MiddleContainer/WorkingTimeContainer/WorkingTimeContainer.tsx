@@ -3,7 +3,7 @@ import styles from './workingtimecontainer.module.css';
 import { getToday } from '../../../../utils/js/detToday';
 import { handleTime } from '../../../../utils/js/dateTransform';
 import { getDayTotalTime } from '../getDayTotalTime';
-import { IStatistic } from '../../../AppMain/TasksWindow/model';
+import { IStatistic } from '../../../model';
 
 export function WorkingTimeContainer(props: {statistic: IStatistic, pickedDay: number}) {
 

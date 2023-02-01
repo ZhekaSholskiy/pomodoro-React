@@ -3,11 +3,9 @@ import styles from './appcontainer.module.css';
 import { AppFooter } from './AppFooter';
 import { Outlet } from "react-router-dom";
 import { StoreProvider } from 'easy-peasy';
-import { tasksStore } from './AppMain';
-
+import { tasksStore } from './store';
 
 export function AppContainer() {
-
   return (
     <StoreProvider store={tasksStore}>
       <div className={styles.container}>

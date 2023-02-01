@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './middlecontainer.module.css';
-import { IStatistic } from '../../AppMain/TasksWindow/model';
+import { IStatistic } from '../../model';
 import { Chart } from './Chart';
 import { WorkingTimeContainer } from './WorkingTimeContainer';
 import { TomatosAmountContainer } from './TomatosAmountContainer';

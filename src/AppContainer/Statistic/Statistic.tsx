@@ -3,14 +3,12 @@ import styles from './statistic.module.css';
 import { TopContainer } from './TopContainer';
 import { MiddleContainer } from './MiddleContainer';
 import { BottomContainer } from './BottomContainer';
-import { useStoreState } from '../AppMain/TasksWindow/model';
+import { useStoreState } from '../model';
 import { getCurrentWeek } from './recalcTime';
 
 export function Statistic() {
   const [currentWeek, setCurrentWeek] = useState('Эта неделя');
   const [pickedDay, setPickedDay] = useState(currentWeek === 'Эта неделя' ? new Date().getDay() : 1);
-  // const [generalInfo, sethui] = useState(getFakeStat);
-  // const generalInfoTest = getFakeStat();
   const generalInfo = useStoreState((state) => state.statInfo);
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './bottomcontainer.module.css';
-import { IStatistic } from '../../AppMain/TasksWindow/model';
+import { IStatistic } from '../../model';
 import { getDayTotalTime, metrics } from '../MiddleContainer/getDayTotalTime';
 
 export function BottomContainer(props: {statistic: IStatistic, pickedDay: number}) {

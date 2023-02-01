@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TimeBoard } from './TimeBoard';
 import { setStatisticTime } from '../../setStatisticTime';
-import { statisticType, useStoreActions, useStoreState } from '../../../TasksWindow/model';
+import { statisticType, useStoreActions, useStoreState } from '../../../../model';
 import { timerProps } from '../../../../globalTypes';
 
 export function TimeBoardWrapper(props: { timerProps:timerProps}) {
@@ -44,7 +44,8 @@ export function TimeBoardWrapper(props: { timerProps:timerProps}) {
     }
 
     postTotalTime(totalTime);
-    postPauseTime(pauseTime)
+    postPauseTime(pauseTime);
+
     return () => {
                   clearInterval(pauseTimer)
                   clearInterval(timer)
